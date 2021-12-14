@@ -1,17 +1,25 @@
 import React from "react";
+
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
 import './App.css';
+
 import Navbar from "./components/navbar";
 import Home from './pages/home'
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Footer from "./components/footer";
+import Menu from "./pages/menu";
+
 
 function App() {
   return (
     <div className="App">
         <Router>
             <Navbar />
-            <Routes>
-                <Route exact path="/" element={Home />} />
-            </Routes>
+            <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/menu" exact component={Menu} />
+            </Switch>
+            <Footer />
         </Router>
     </div>
   );
