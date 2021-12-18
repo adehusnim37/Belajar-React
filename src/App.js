@@ -8,7 +8,8 @@ import Navbar from "./components/navbar";
 import Home from './pages/home'
 import Footer from "./components/footer";
 import Menu from "./pages/menu";
-
+import About from "./pages/about";
+import Contact from "./pages/contact";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/menu" exact component={Menu} />
+                <Route path="/about" exact component={About}/>
+                <Route path="/contact" exact component={Contact}/>
             </Switch>
             <Footer />
         </Router>
